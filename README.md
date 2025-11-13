@@ -6,4 +6,8 @@ This file consists of a script to play rock paper scissors. This was built using
 The script will prompt two users. player1 and player2. It will display a message to the players, stating: pls choose rock, scissors or paper.
 The players can only type in rock/paper/scissors because the "valid_choices" was implemented  
 
-#  
+# how to use
+1. run bash
+2. download the file "rock scissors paper"
+3. run "rock scissors paper.py" in bash
+
