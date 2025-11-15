@@ -12,5 +12,7 @@ The players can only type in rock/paper/scissors because the "valid_choices" was
 3. run "rock scissors paper.py" in bash
 
 # example
-<img width="892" height="538" alt="image" src="https://github.com/user-attachments/assets/0a6bb08d-d335-4060-bdae-dbde3b842d36" />
+player1 pls choose rock, scissors and paper paper
+player2 pls choose rock, scissors and paper scissors
+player1 wins!
 
