@@ -1,37 +1,56 @@
+
+# Online IDE - Code Editor, Compiler, Interpreter
+
 print("This is a rock paper scissors game")
 print("do you want:")
 print("1. player against player")
-print("2. player gainst ai")
+print("2. player against AI")
 
-choice = input("choose 1 or 2")
+choice = input("choose 1 or 2: ")
+valid_choices = ("rock", "paper", "scissors")
 
 if choice == "1":
+    while True:
+        player1 = input("Player 1, choose rock, paper, or scissors: ")
+        if player1 in valid_choices:
+            break
+        print("Invalid choice, try again!")
 
-    valid_choices=("rock", "paper", "scissors")
+    while True:
+        player2 = input("Player 2, choose rock, paper, or scissors: ")
+        if player2 in valid_choices:
+            break
+        print("Invalid choice, try again!")
 
-while True: 
-    player1=input(" player 1 pls choose rock, scissors or paper")
-    if player1 in valid_choices:
-        break
-else: 
-    print("invalid choices: choose only rock, paper or scissors")
+    if player1 == player2:
+        print("It's a tie!")
+    elif (player1 == "rock" and player2 == "scissors") or \
+         (player1 == "paper" and player2 == "rock") or \
+         (player1 == "scissors" and player2 == "paper"):
+        print("Player 1 wins!")
+    else:
+        print("Player 2 wins!")
 
-while True:
-    player2=input("player 2 pls choose rock, scissors or paper")
-    if player2 in valid_choices:
-        break
-else: 
-    print("invalid choices: choose only rock, paper or scissors")
+elif choice == "2":
+    import random
+    while True:
+        player1 = input("Player, choose rock, paper, or scissors: ")
+        if player1 in valid_choices:
+            break
+        print("Invalid choice, try again!")
+
+    ai_choice = random.choice(valid_choices)
+    print(f"AI chooses: {ai_choice}")
+
+    if player1 == ai_choice:
+        print("It's a tie!")
+    elif (player1 == "rock" and ai_choice == "scissors") or \
+         (player1 == "paper" and ai_choice == "rock") or \
+         (player1 == "scissors" and ai_choice == "paper"):
+        print("Player wins!")
+    else:
+        print("AI wins!")
+
+else:
+    print("Invalid choice. Please select 1 or 2.")
     
-if player1 == player2: 
-    print("its a tie!")
-elif player1==("rock") and player2==("paper"):
-    print("player2 wins!")
-elif player1==("rock") and player2==("scissors"):
-    print("player1 wins!")
-elif player1==("paper") and player2==("rock"):
-    print("player1 wins!") 
-elif player1==("scissors") and player2==("rock"):
-    print("player2 wins")
-    
-elif == "2":
